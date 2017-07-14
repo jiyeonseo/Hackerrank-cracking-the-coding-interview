@@ -1,7 +1,7 @@
 
 .gitignore
 .idea/vcs.xml
-
+.idea/*
 
 # Created by https://www.gitignore.io/api/java,intellij
 

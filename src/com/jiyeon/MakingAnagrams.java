@@ -1,5 +1,7 @@
 package com.jiyeon;
 
+import java.util.Hashtable;
+
 /**
  * Created by jiyeon on 2017. 7. 15..
  * https://www.hackerrank.com/challenges/ctci-making-anagrams
@@ -20,6 +22,7 @@ public class MakingAnagrams {
 
         // 만약 같은 알파벳이 있었다면 +1-1되어서 0이 되었을 것
 
+        Hashtable<String, Boolean> ht = new Hashtable<String, Boolean>();
         int result = 0;
         for(int i = 0; i < resultArr.length; i++ ) {
             result += Math.abs((resultArr[i])); // 음수 일수도 있으므로 Math.abs를 이용해 절대값으로 만든다.
