@@ -69,6 +69,8 @@ public class LinkedListCycle {
 
 
     boolean hasCycle1(Node head) {
+//      HackerRank  video : https://www.youtube.com/watch?v=MFOAbpfrJ8g
+
         if (head == null) return false;
 
         Node slow = head;
