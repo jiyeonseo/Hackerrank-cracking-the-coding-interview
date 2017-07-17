@@ -9,6 +9,7 @@ import java.util.*;
  */
 public class LonelyInteger {
     public static int getLonelyInteger2(int[] arr) { // hackerRank Solution
+        // https://www.hackerrank.com/challenges/ctci-lonely-integer/editorial
         // 들어온 숫자들을 이진법으로 한다음  자리수 마다 더하면 다 더한 값이 unique한 숫자
         int result = 0;
 
