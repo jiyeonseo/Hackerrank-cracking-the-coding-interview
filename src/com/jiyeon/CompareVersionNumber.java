@@ -41,12 +41,12 @@ public class CompareVersionNumber {
         }
     }
     public static void main(String[] args) {
-        String[] versions = {"1.2", "0.1", "13.37", "1.1"};
+        String[] versions = {"1.2.2", "0.1.1", "13.37", "1.1", "1.1.2", "1.1.11"};
 
 
         VersionComparator checker = new VersionComparator();
         Arrays.sort(versions, checker);
 
-        System.out.println(Arrays.toString(versions)); // //0.1 < 1.1 < 1.2 < 13.37
+        System.out.println(Arrays.toString(versions)); //  0.1.1 <  1.1 < 1.1.2 < 1.1.11 < 1.2.2 < 13.37
     }
 }
