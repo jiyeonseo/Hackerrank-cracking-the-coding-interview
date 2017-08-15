@@ -67,6 +67,30 @@ public class LinkedListCycle {
         }
     }
 
+    public static Node detectCycle(Node a) {
+        Node fast = a;
+        Node slow = a;
+        boolean hasCycle = false;
+        while(fast != null && fast.next != null && slow != null){
+            fast = fast.next.next;
+            slow = slow.next;
+            if(fast == slow){
+                hasCycle = true;
+                break;
+            }
+        }
+
+        if(!hasCycle) return null;
+        else{
+            fast = a;
+            while(fast != slow){
+                fast = fast.next;
+                slow = slow.next;
+            }
+            return fast;
+        }
+    }
+
 
     boolean hasCycle1(Node head) {
 //      HackerRank  video : https://www.youtube.com/watch?v=MFOAbpfrJ8g
@@ -106,5 +130,6 @@ public class LinkedListCycle {
     }
 
     public static void main(String[] args) {
+
     }
 }
