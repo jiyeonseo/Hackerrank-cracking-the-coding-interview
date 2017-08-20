@@ -11,6 +11,26 @@ package com.jiyeon;
  *
  */
 public class StairCase {
+
+    private static int getWaysWithDP(int n) {
+        if(n < 0) {
+            return 0;
+        }
+        else if(n<2) {
+            return 1;
+        }
+
+        int[] paths = new int[n+1];
+        paths[0] = 1;
+        paths[1] = 1;
+        paths[2] = 2;
+        for(int i=3; i<=n; i++) {
+            paths[i] = getWaysWithDP(i-1) + getWaysWithDP(i-2) + getWaysWithDP(i-3);
+        }
+
+        return paths[n];
+    }
+
     private static int getWaysWithMemo(int n) {
         return getWaysWithMemo(n, new int[n+1]);
     }
@@ -50,5 +70,10 @@ public class StairCase {
         System.out.println(getWaysWithMemo(3)); // 4
         System.out.println(getWaysWithMemo(7)); // 44
 
+
+        System.out.println(getWaysWithDP(1));
+        System.out.println(getWaysWithDP(2));
+        System.out.println(getWaysWithDP(3)); // 4
+        System.out.println(getWaysWithDP(7)); // 44
     }
 }
